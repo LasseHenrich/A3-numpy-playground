@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "homework_id": "a3-numpy-playground",
+  "tests": {
+    "batch_flatten_shapes": "sha256:22f8db3806b2a1ed152c819bd2abfd12df0986aa526fc9b5178fc0e08f6367e7",
+    "batch_flatten_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "split_into_patches": "sha256:ba18ebf8817865b974313fa1c29532c7a148517ff877558cb17eb22708f25589",
+    "split_into_patches_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c",
+    "channels_first_to_last": "sha256:30d35873db3f37eddc03306a52d519d5951c36adf4eccf6d7793d606ee96993c",
+    "channels_first_to_last_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "interleave_rows": "sha256:de3fd212d1b228a555f1d57391444275521cc21e08965eeb9da16a0fc6acb549",
+    "interleave_rows_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "tile_vector": "sha256:768a4e4af46b361df224099fa0f3fb85705c00d6539efacd5cd2f837282b2d48",
+    "tile_vector_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c"
+  }
+}

@@ -41,8 +41,11 @@ def batch_flatten(X: np.ndarray) -> np.ndarray:
         ValueError -- if X has fewer than 2 dimensions
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if X.ndim < 2:
+        raise ValueError(f"X must have at least 2 dimensions, but has {X.ndim}")
+    
+    B = X.shape[0]
+    return X.reshape(B, -1)
 
 
 def split_into_patches(X: np.ndarray, patch_h: int, patch_w: int) -> np.ndarray:
@@ -70,9 +73,16 @@ def split_into_patches(X: np.ndarray, patch_h: int, patch_w: int) -> np.ndarray:
     Raises:
         ValueError -- if X is not 2-D, or patch dimensions don't divide evenly
     """
-
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if X.ndim != 2:
+        raise ValueError(f"X must be 2-D, but has {X.ndim} dimensions")
+    H, W = X.shape
+    
+    if H % patch_h != 0 or W % patch_w != 0:
+        raise ValueError(f"patch dimensions don't divide evenly")
+    
+    return X\
+        .reshape(H // patch_h, patch_h, W // patch_w, patch_w)\
+        .transpose(0, 2, 1, 3)
 
 
 def channels_first_to_last(X: np.ndarray) -> np.ndarray:
@@ -93,9 +103,12 @@ def channels_first_to_last(X: np.ndarray) -> np.ndarray:
     Raises:
         ValueError -- if X does not have exactly 4 dimensions
     """
+    
+    if X.ndim != 4:
+        raise ValueError(f"X must be 4-D, but has {X.ndim} dimensions")
+    
+    return X.transpose(0, 2, 3, 1)
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
 
 
 def interleave_rows(A: np.ndarray, B: np.ndarray) -> np.ndarray:
@@ -116,8 +129,16 @@ def interleave_rows(A: np.ndarray, B: np.ndarray) -> np.ndarray:
         ValueError -- if A and B do not have the same shape or are not 2-D
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if A.shape != B.shape:
+        raise ValueError("A and B must have same shape")
+    
+    if A.ndim != 2 or B.ndim != 2:
+        raise ValueError("A and B must be 2-D")
+    
+    n, d = A.shape
+    return np\
+        .stack((A, B), axis=1)\
+        .reshape(2 * n, d)
 
 
 def tile_vector(v: np.ndarray, n: int) -> np.ndarray:
@@ -138,8 +159,14 @@ def tile_vector(v: np.ndarray, n: int) -> np.ndarray:
         ValueError -- if v is not 1-D or n < 1
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if v.ndim != 1:
+        raise ValueError(f"v must be 1-D, but has {v.ndim} dimensions")
+    
+    if n < 1:
+        raise ValueError(f"n must be positive, but got {n}")
+    
+    d = len(v)
+    return np.broadcast_to(v, (n, d))
 
 
 if __name__ == "__main__":
