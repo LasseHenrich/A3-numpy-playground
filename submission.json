@@ -2,11 +2,15 @@
   "schema_version": 1,
   "homework_id": "a3-numpy-playground",
   "tests": {
-    "relu": "sha256:db60ea7d2d0b9f60068229e59b0236f1858902ad2e7cc7d00ae0d209c362ba80",
-    "sigmoid": "sha256:ecc534cc3492eed0acb917bed7838608fee9ac8a2c108e68e12d5037e629d01b",
-    "gelu": "sha256:79aada2325df487df6a6daad6d3d292f29b7f0bb4618f9195d1cb94932f847e8",
-    "log_sum_exp": "sha256:56c1b1dc3d0997dcc47e9bebce1d11a64a8f6c4a86ce8b98584d5c369909c6cd",
-    "log_sum_exp_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c",
-    "softplus": "sha256:42b63ebb8a5611c959d474db12dbf0c3f7c2cb3629004f85600f26c881580716"
+    "row_mean": "sha256:958fb6a3528ceba7f58bb4dd105ee810ed1d58ee58ab0684abcab02c9ac5ca16",
+    "row_mean_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "column_variance": "sha256:eb1b3c666928abed789c3efcd8bda1ac1361c84aee384efa27271cb34ee211b5",
+    "column_variance_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c",
+    "log_sum_exp_rows": "sha256:d62ab0b2f8eb30e60d6f7442ceb12dcddd57d244df9383fa6325b85a45bfc288",
+    "log_sum_exp_rows_raises": "sha256:1d8fc6ceb1f94c6326d6d5483d258fcb2e179e9869325b245d105c2219bf69fd",
+    "cumulative_row_mean": "sha256:4b0e32a7596fd6cb46e00bb27d96abf3f931fc655386ae8244b3767d2535db54",
+    "cumulative_row_mean_raises": "sha256:1d8fc6ceb1f94c6326d6d5483d258fcb2e179e9869325b245d105c2219bf69fd",
+    "top_k_mask": "sha256:d159e4c4377ff030f379880c76847d44a2bffab2e0acba9771cfa0e4eb534120",
+    "top_k_mask_raises": "sha256:7ed5958c5c4e53cf25f55d33f1988c7429fcf9b5ae5bfa846d60be2a1a927d0f"
   }
 }

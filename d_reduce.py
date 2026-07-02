@@ -37,10 +37,11 @@ def row_mean(X: np.ndarray) -> np.ndarray:
     Raises:
         ValueError -- if X is not 2-D
     """
+    if X.ndim != 2:
+        raise ValueError("X must be 2-D")
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
-
+    n, d = X.shape
+    return np.sum(X, axis=1) / d
 
 def column_variance(X: np.ndarray) -> np.ndarray:
     """
@@ -59,8 +60,16 @@ def column_variance(X: np.ndarray) -> np.ndarray:
         ValueError -- if X is not 2-D or has fewer than 2 rows
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if X.ndim != 2:
+        raise ValueError("X must be 2-D")
+    
+    n, d = X.shape
+    
+    if n < 2:
+        raise ValueError("X must have at least 2 rows")
+    
+    col_mean = np.sum(X, axis=0) / n
+    return (1 / (n-1)) * np.sum((X - col_mean) ** 2, axis=0)
 
 
 def log_sum_exp_rows(X: np.ndarray) -> np.ndarray:
