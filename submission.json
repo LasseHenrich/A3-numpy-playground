@@ -2,15 +2,11 @@
   "schema_version": 1,
   "homework_id": "a3-numpy-playground",
   "tests": {
-    "gram_matrix": "sha256:3b7920fdfb460a9495180cbbad8262043a34011d887fa0a0038f37459432d442",
-    "gram_matrix_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "scatter_matrix": "sha256:65dd2b85620844f2988007bcbdf568d4ae1656cae54d9f8f140b41c969aec19d",
-    "scatter_matrix_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "batch_transpose": "sha256:54068536ce5f33d91186f9bd9963bd969afd2cc1b284805fce94e09a699aeb6b",
-    "batch_transpose_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "is_symmetric": "sha256:f3dd3517044de139a78dda9c4b8b5a6180f2f50ce560d9e0d8a023d48576210f",
-    "is_symmetric_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "column_outer_products": "sha256:cf77e9cbeb743dc184be7709f505e5684291360391bad8047000b75e805727ba",
-    "column_outer_products_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e"
+    "relu": "sha256:db60ea7d2d0b9f60068229e59b0236f1858902ad2e7cc7d00ae0d209c362ba80",
+    "sigmoid": "sha256:ecc534cc3492eed0acb917bed7838608fee9ac8a2c108e68e12d5037e629d01b",
+    "gelu": "sha256:79aada2325df487df6a6daad6d3d292f29b7f0bb4618f9195d1cb94932f847e8",
+    "log_sum_exp": "sha256:56c1b1dc3d0997dcc47e9bebce1d11a64a8f6c4a86ce8b98584d5c369909c6cd",
+    "log_sum_exp_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c",
+    "softplus": "sha256:42b63ebb8a5611c959d474db12dbf0c3f7c2cb3629004f85600f26c881580716"
   }
 }

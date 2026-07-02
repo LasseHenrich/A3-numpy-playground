@@ -20,6 +20,7 @@ DO NOT MODIFY THE FUNCTION SIGNATURES.
 """
 
 import numpy as np
+from scipy.special import erf, ndtr
 
 
 def relu(Z: np.ndarray) -> np.ndarray:
@@ -33,8 +34,7 @@ def relu(Z: np.ndarray) -> np.ndarray:
         np.ndarray of the same shape, all values >= 0
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    return np.maximum(0, Z)
 
 
 def sigmoid(Z: np.ndarray) -> np.ndarray:
@@ -54,8 +54,7 @@ def sigmoid(Z: np.ndarray) -> np.ndarray:
         np.ndarray of the same shape, values in (0, 1)
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    return np.where(Z > 0, 1 / (1 + np.exp(-Z)), np.exp(Z) / (1 + np.exp(Z)))
 
 
 def gelu(Z: np.ndarray) -> np.ndarray:
@@ -77,8 +76,7 @@ def gelu(Z: np.ndarray) -> np.ndarray:
         np.ndarray of the same shape
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    return Z * ndtr(Z)
 
 
 def log_sum_exp(x: np.ndarray) -> float:
@@ -99,8 +97,8 @@ def log_sum_exp(x: np.ndarray) -> float:
         ValueError -- if x is empty or not 1-D
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    c = max(x)
+    return c + np.log(np.sum(np.exp(x - c)))
 
 
 def softplus(Z: np.ndarray) -> np.ndarray:
@@ -119,8 +117,7 @@ def softplus(Z: np.ndarray) -> np.ndarray:
         np.ndarray of the same shape, all values > 0
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    return np.where(Z > 20, np.log(1 + np.exp(Z)), np.log(1 + np.exp(Z)))
 
 
 if __name__ == "__main__":
