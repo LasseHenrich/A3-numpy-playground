@@ -1,0 +1,45 @@
+[project]
+name = "pyml-assignment-3"
+version = "0.1.0"
+readme = "README.md"
+requires-python = "==3.14.0"
+dependencies = [
+    "numpy==2.4.4",
+    "scipy==1.17.1",
+    # Jupyter
+    "jupyterlab==4.5.6",
+    "notebook==7.5.5",
+    "jupyterlab-rise==0.43.1",
+    # QA
+    "mypy==1.20.2",
+    "ruff==0.15.12",
+    "pytest==9.0.3",
+    "pytest-cov==7.1.0",
+    "pre-commit==4.6.0",
+    "nbqa[toolchain]==1.9.1",
+    "nb-clean==4.0.1",
+]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+ignore = [
+    "E402",  # module level import not at top of file
+    "F401",  # unused imports
+]
+
+[tool.mypy]
+python_version = "3.14"
+ignore_missing_imports = true
+warn_return_any = true
+warn_unused_configs = true
+disable_error_code = [
+    "empty-body",    # skeleton functions students must implement
+    "attr-defined",  # skeleton classes missing student-implemented attributes
+    "call-arg",      # skeleton __init__ signatures not yet written
+    "call-overload", # skeleton __iter__ not yet implemented
+    "index",         # skeleton __getitem__ not yet implemented
+    "arg-type",      # doctest examples and skeleton call sites
+    "union-attr",    # submit.py infrastructure (spec may be None)
+]
