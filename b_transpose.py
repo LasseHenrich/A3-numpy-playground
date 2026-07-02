@@ -44,8 +44,10 @@ def gram_matrix(X: np.ndarray) -> np.ndarray:
         ValueError -- if X is not 2-D
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if X.ndim != 2:
+        raise ValueError("X must be 2-D")
+    
+    return X @ X.T
 
 
 def scatter_matrix(X: np.ndarray) -> np.ndarray:
@@ -68,8 +70,11 @@ def scatter_matrix(X: np.ndarray) -> np.ndarray:
         ValueError -- if X is not 2-D
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if X.ndim != 2:
+        raise ValueError("X must be 2-D")
+    
+    mean = np.mean(X, axis=0)
+    return (X - mean).T @ (X - mean)
 
 
 def batch_transpose(A: np.ndarray) -> np.ndarray:
@@ -92,8 +97,10 @@ def batch_transpose(A: np.ndarray) -> np.ndarray:
         ValueError -- if A does not have exactly 3 dimensions
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if A.ndim != 3:
+        raise ValueError("A must be 3-D")
+    
+    return A.transpose(0, 2, 1)
 
 
 def is_symmetric(A: np.ndarray, tol: float = 1e-9) -> bool:
@@ -111,8 +118,10 @@ def is_symmetric(A: np.ndarray, tol: float = 1e-9) -> bool:
         ValueError -- if A is not 2-D or not square
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if A.ndim != 2:
+        raise ValueError("A must be 2-D")
+    
+    return np.allclose(A, A.T, atol=tol)
 
 
 def column_outer_products(X: np.ndarray) -> np.ndarray:
@@ -137,8 +146,10 @@ def column_outer_products(X: np.ndarray) -> np.ndarray:
         ValueError -- if X is not 2-D
     """
 
-    # --- IMPLEMENT SOLUTION HERE ---
-    pass
+    if X.ndim != 2:
+        raise ValueError("X is not 2-D")
+    
+    return X.T @ X
 
 
 if __name__ == "__main__":

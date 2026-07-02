@@ -2,15 +2,15 @@
   "schema_version": 1,
   "homework_id": "a3-numpy-playground",
   "tests": {
-    "batch_flatten_shapes": "sha256:22f8db3806b2a1ed152c819bd2abfd12df0986aa526fc9b5178fc0e08f6367e7",
-    "batch_flatten_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "split_into_patches": "sha256:ba18ebf8817865b974313fa1c29532c7a148517ff877558cb17eb22708f25589",
-    "split_into_patches_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c",
-    "channels_first_to_last": "sha256:30d35873db3f37eddc03306a52d519d5951c36adf4eccf6d7793d606ee96993c",
-    "channels_first_to_last_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "interleave_rows": "sha256:de3fd212d1b228a555f1d57391444275521cc21e08965eeb9da16a0fc6acb549",
-    "interleave_rows_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
-    "tile_vector": "sha256:768a4e4af46b361df224099fa0f3fb85705c00d6539efacd5cd2f837282b2d48",
-    "tile_vector_raises": "sha256:26687e4e5bf12846b0c08b8bc198e73a2b19a77042144e53317ab6760a3ba86c"
+    "gram_matrix": "sha256:3b7920fdfb460a9495180cbbad8262043a34011d887fa0a0038f37459432d442",
+    "gram_matrix_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "scatter_matrix": "sha256:65dd2b85620844f2988007bcbdf568d4ae1656cae54d9f8f140b41c969aec19d",
+    "scatter_matrix_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "batch_transpose": "sha256:54068536ce5f33d91186f9bd9963bd969afd2cc1b284805fce94e09a699aeb6b",
+    "batch_transpose_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "is_symmetric": "sha256:f3dd3517044de139a78dda9c4b8b5a6180f2f50ce560d9e0d8a023d48576210f",
+    "is_symmetric_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e",
+    "column_outer_products": "sha256:cf77e9cbeb743dc184be7709f505e5684291360391bad8047000b75e805727ba",
+    "column_outer_products_raises": "sha256:3cb90a57087474eb7aa5d295f35b9623553929cfb22e370b65377ef753257e9e"
   }
 }
